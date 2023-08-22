@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: build-openwrt
+name: openwrt
 
 on:
   repository_dispatch:
@@ -19,7 +19,7 @@ on:
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt.git
-  REPO_BRANCH: v23.05.0-rc2
+  REPO_BRANCH: v23.05.0-rc3
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
   DIY_P1_SH: diy-part1.sh
