@@ -6,6 +6,7 @@ libltdl-dev libmpc-dev libmpfr-dev libncurses5-dev libncursesw5-dev libpython3-d
 libssl-dev libtool lrzsz mkisofs msmtp ninja-build p7zip p7zip-full patch pkgconf python2.7 python3 \
 python3-pyelftools python3-setuptools qemu-utils rsync scons squashfs-tools subversion swig texinfo \
 uglifyjs upx-ucl unzip vim wget xmlto xxd zlib1g-dev
-git clone https://github.com/openwrt/openwrt.git
+
+git clone https://github.com/openwrt/openwrt.git -b v23.05.3
 
 cd openwrt && ./scripts/feeds update -a && ./scripts/feeds install -a
