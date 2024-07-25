@@ -10,7 +10,7 @@ uglifyjs upx-ucl unzip vim wget xmlto xxd zlib1g-dev
 
 rm -rf /tmp/openwrt
 
-cd /tmp && git clone https://github.com/openwrt/openwrt.git -b v23.05.3
+cd /tmp && git clone https://github.com/openwrt/openwrt.git -b v23.05.4
 
 cd /tmp/openwrt && ./scripts/feeds update -a && ./scripts/feeds install -a
 
