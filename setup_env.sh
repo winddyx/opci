@@ -7,6 +7,6 @@ libssl-dev libtool lrzsz mkisofs msmtp ninja-build p7zip p7zip-full patch pkgcon
 python3-pyelftools python3-setuptools qemu-utils rsync scons squashfs-tools subversion swig texinfo \
 uglifyjs upx-ucl unzip vim wget xmlto xxd zlib1g-dev
 rm -rf /tmp/openwrt
-cd /tmp && git clone https://github.com/immortalwrt/immortalwrt.git -b v23.05.3
+cd /tmp && git clone https://github.com/immortalwrt/immortalwrt.git -b v23.05.3 openwrt
 cd /tmp/openwrt && ./scripts/feeds update -a && ./scripts/feeds install -a
 cd /tmp/openwrt && make menuconfig
