@@ -15,7 +15,7 @@ on:
     branches:
       - main
     paths:
-      - '.config'
+      - 'config'
   repository_dispatch:
   workflow_dispatch:
 
