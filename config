@@ -45,8 +45,8 @@ CONFIG_TARGET_ramips=y
 # CONFIG_TARGET_ath79_generic is not set
 # CONFIG_TARGET_ath79_nand is not set
 # CONFIG_TARGET_ath79_tiny is not set
-# CONFIG_TARGET_ramips_mt7620 is not set
-CONFIG_TARGET_ramips_mt7621=y
+CONFIG_TARGET_ramips_mt7620=y
+# CONFIG_TARGET_ramips_mt7621 is not set
 # CONFIG_TARGET_ramips_mt76x8 is not set
 # CONFIG_TARGET_ramips_rt288x is not set
 # CONFIG_TARGET_ramips_rt305x is not set
@@ -220,7 +220,7 @@ CONFIG_TARGET_ramips_mt7621=y
 # CONFIG_TARGET_ramips_mt7620_DEVICE_mlw221 is not set
 # CONFIG_TARGET_ramips_mt7620_DEVICE_mlwg2 is not set
 # CONFIG_TARGET_ramips_mt7620_DEVICE_lava_lr-25g001 is not set
-# CONFIG_TARGET_ramips_mt7620_DEVICE_y1 is not set
+CONFIG_TARGET_ramips_mt7620_DEVICE_y1=y
 # CONFIG_TARGET_ramips_mt7620_DEVICE_y1s is not set
 # CONFIG_TARGET_ramips_mt7620_DEVICE_e1700 is not set
 # CONFIG_TARGET_ramips_mt7620_DEVICE_mt7620a_mt7530 is not set
@@ -267,68 +267,11 @@ CONFIG_TARGET_ramips_mt7621=y
 # CONFIG_TARGET_ramips_mt7620_DEVICE_kn_rc is not set
 # CONFIG_TARGET_ramips_mt7620_DEVICE_kn_rf is not set
 # CONFIG_TARGET_ramips_mt7620_DEVICE_kng_rc is not set
-# CONFIG_TARGET_ramips_mt7621_Default is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_ew1200 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_alfa-network_quad-e4g is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_asus_rt-ac57u is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_wsr-1166 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_wsr-600 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_xzwifi_creativebox-v1 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_dir-860l-b1 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_elecom_wrc-1167ghbk2-s is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_elecom_wrc-1900gst is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_elecom_wrc-2533gst is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_firewrt is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_gehua_ghl-r-001 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_gnubee_gb-pc1 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_gnubee_gb-pc2 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_hc5962 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_iodata_wn-ax1167gr is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_iodata_wn-gx300gr is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_re6500 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_mqmaker_witi-256m is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_mqmaker_witi-512m is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_mtc_wr1201 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_mt7621 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_mediatek_ap-mt7621a-v60 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_mikrotik_rbm11g is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_mikrotik_rbm33g is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_mikrotik_rb750gr3 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_wf-2881 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_netgear_ex6150 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_r6220 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_netgear_r6350 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_wndr3700v5 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_newifi-d1 is not set
-CONFIG_TARGET_ramips_mt7621_DEVICE_d-team_newifi-d2=y
-# CONFIG_TARGET_ramips_mt7621_DEVICE_pbr-m1 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_k2p is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_vr500 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_sap-g3200u3 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_sk-wb8 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_re350-v1 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_telco-electronics_x1 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_timecloud is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_ubnt-erx is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_ubnt-erx-sfp is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_unielec_u7621-06-256m-16m is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_unielec_u7621-06-512m-64m is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_11acnas is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_w2914nsv2 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_xiaomi_mir3p is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_xiaomi_mir3g is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_youhua_wr1200js is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_youku_yk-l2 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_zbt-we1326 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_zbtlink_zbt-we3526 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_zbt-wg2626 is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_zbt-wg3526-16M is not set
-# CONFIG_TARGET_ramips_mt7621_DEVICE_zbt-wg3526-32M is not set
 CONFIG_HAS_SUBTARGETS=y
 CONFIG_HAS_DEVICES=y
 CONFIG_TARGET_BOARD="ramips"
-CONFIG_TARGET_SUBTARGET="mt7621"
-CONFIG_TARGET_PROFILE="DEVICE_d-team_newifi-d2"
+CONFIG_TARGET_SUBTARGET="mt7620"
+CONFIG_TARGET_PROFILE="DEVICE_y1"
 CONFIG_TARGET_ARCH_PACKAGES="mipsel_24kc"
 CONFIG_DEFAULT_TARGET_OPTIMIZATION="-Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc"
 CONFIG_CPU_TYPE="24kc"
@@ -345,10 +288,10 @@ CONFIG_DEFAULT_iwinfo=y
 CONFIG_DEFAULT_kmod-gpio-button-hotplug=y
 CONFIG_DEFAULT_kmod-ipt-offload=y
 CONFIG_DEFAULT_kmod-leds-gpio=y
-CONFIG_DEFAULT_kmod-mt7603=y
 CONFIG_DEFAULT_kmod-mt76x2=y
-CONFIG_DEFAULT_kmod-usb-ledtrig-usbport=y
-CONFIG_DEFAULT_kmod-usb3=y
+CONFIG_DEFAULT_kmod-rt2800-soc=y
+CONFIG_DEFAULT_kmod-usb-ohci=y
+CONFIG_DEFAULT_kmod-usb2=y
 CONFIG_DEFAULT_libc=y
 CONFIG_DEFAULT_libgcc=y
 CONFIG_DEFAULT_logd=y
@@ -369,13 +312,10 @@ CONFIG_AUDIO_SUPPORT=y
 CONFIG_GPIO_SUPPORT=y
 CONFIG_PCI_SUPPORT=y
 CONFIG_USB_SUPPORT=y
-CONFIG_RTC_SUPPORT=y
 CONFIG_USES_DEVICETREE=y
 CONFIG_USES_INITRAMFS=y
 CONFIG_USES_SQUASHFS=y
-CONFIG_USES_MINOR=y
 CONFIG_HAS_MIPS16=y
-CONFIG_NAND_SUPPORT=y
 CONFIG_mipsel=y
 CONFIG_ARCH="mipsel"
 
@@ -1669,7 +1609,6 @@ CONFIG_DROPBEAR_DBCLIENT=y
 # CONFIG_PACKAGE_ead is not set
 CONFIG_PACKAGE_firewall=y
 CONFIG_PACKAGE_fstools=y
-CONFIG_FSTOOLS_UBIFS_EXTROOT=y
 # CONFIG_FSTOOLS_OVL_MOUNT_FULL_ACCESS_TIME is not set
 # CONFIG_FSTOOLS_OVL_MOUNT_COMPRESS_ZLIB is not set
 CONFIG_PACKAGE_fwtool=y
@@ -2394,7 +2333,6 @@ CONFIG_PACKAGE_kmod-gpio-button-hotplug=y
 # CONFIG_PACKAGE_kmod-gpio-nxp-74hc164 is not set
 # CONFIG_PACKAGE_kmod-gpio-pca953x is not set
 # CONFIG_PACKAGE_kmod-gpio-pcf857x is not set
-# CONFIG_PACKAGE_kmod-hsdma-mtk is not set
 # CONFIG_PACKAGE_kmod-ikconfig is not set
 # CONFIG_PACKAGE_kmod-it87-wdt is not set
 # CONFIG_PACKAGE_kmod-itco-wdt is not set
@@ -2462,10 +2400,11 @@ CONFIG_PACKAGE_kmod-gpio-button-hotplug=y
 CONFIG_PACKAGE_kmod-usb-core=y
 # CONFIG_PACKAGE_kmod-usb-dwc2 is not set
 # CONFIG_PACKAGE_kmod-usb-dwc3 is not set
+CONFIG_PACKAGE_kmod-usb-ehci=y
 # CONFIG_PACKAGE_kmod-usb-hid is not set
-CONFIG_PACKAGE_kmod-usb-ledtrig-usbport=y
+# CONFIG_PACKAGE_kmod-usb-ledtrig-usbport is not set
 # CONFIG_PACKAGE_kmod-usb-net is not set
-# CONFIG_PACKAGE_kmod-usb-ohci is not set
+CONFIG_PACKAGE_kmod-usb-ohci=y
 # CONFIG_PACKAGE_kmod-usb-ohci-pci is not set
 # CONFIG_PACKAGE_kmod-usb-printer is not set
 # CONFIG_PACKAGE_kmod-usb-serial is not set
@@ -2475,9 +2414,9 @@ CONFIG_PACKAGE_kmod-usb-ledtrig-usbport=y
 # CONFIG_PACKAGE_kmod-usb-uhci is not set
 # CONFIG_PACKAGE_kmod-usb-wdm is not set
 # CONFIG_PACKAGE_kmod-usb-yealink is not set
-# CONFIG_PACKAGE_kmod-usb2 is not set
+CONFIG_PACKAGE_kmod-usb2=y
 # CONFIG_PACKAGE_kmod-usb2-pci is not set
-CONFIG_PACKAGE_kmod-usb3=y
+# CONFIG_PACKAGE_kmod-usb3 is not set
 # CONFIG_PACKAGE_kmod-usbip is not set
 # CONFIG_PACKAGE_kmod-usbip-client is not set
 # CONFIG_PACKAGE_kmod-usbip-server is not set
@@ -2557,7 +2496,7 @@ CONFIG_PACKAGE_MAC80211_MESH=y
 # CONFIG_PACKAGE_kmod-mt76 is not set
 CONFIG_PACKAGE_kmod-mt76-core=y
 # CONFIG_PACKAGE_kmod-mt7601u is not set
-CONFIG_PACKAGE_kmod-mt7603=y
+# CONFIG_PACKAGE_kmod-mt7603 is not set
 # CONFIG_PACKAGE_kmod-mt7615e is not set
 CONFIG_PACKAGE_kmod-mt76x02-common=y
 # CONFIG_PACKAGE_kmod-mt76x0e is not set
@@ -2580,9 +2519,15 @@ CONFIG_PACKAGE_kmod-mt76x2-common=y
 # CONFIG_PACKAGE_kmod-rt2400-pci is not set
 # CONFIG_PACKAGE_kmod-rt2500-pci is not set
 # CONFIG_PACKAGE_kmod-rt2500-usb is not set
+CONFIG_PACKAGE_kmod-rt2800-lib=y
+CONFIG_PACKAGE_kmod-rt2800-mmio=y
 # CONFIG_PACKAGE_kmod-rt2800-pci is not set
+CONFIG_PACKAGE_kmod-rt2800-soc=y
 # CONFIG_PACKAGE_kmod-rt2800-usb is not set
-# CONFIG_PACKAGE_kmod-rt2x00-lib is not set
+CONFIG_PACKAGE_kmod-rt2x00-lib=y
+# CONFIG_PACKAGE_RT2X00_LIB_DEBUGFS is not set
+# CONFIG_PACKAGE_RT2X00_DEBUG is not set
+CONFIG_PACKAGE_kmod-rt2x00-mmio=y
 # CONFIG_PACKAGE_kmod-rt61-pci is not set
 # CONFIG_PACKAGE_kmod-rt73-usb is not set
 # CONFIG_PACKAGE_kmod-rtl8180 is not set
@@ -6082,7 +6027,6 @@ CONFIG_PACKAGE_libjson-script=y
 # CONFIG_PACKAGE_mpack is not set
 # CONFIG_PACKAGE_mt-st is not set
 # CONFIG_PACKAGE_namei is not set
-# CONFIG_PACKAGE_nand-utils is not set
 # CONFIG_PACKAGE_netopeer2-cli is not set
 # CONFIG_PACKAGE_netopeer2-keystored is not set
 # CONFIG_PACKAGE_netopeer2-server is not set
@@ -6156,7 +6100,6 @@ CONFIG_STRACE_NONE=y
 # CONFIG_PACKAGE_tracertools is not set
 # CONFIG_PACKAGE_tree is not set
 # CONFIG_PACKAGE_triggerhappy is not set
-CONFIG_PACKAGE_ubi-utils=y
 # CONFIG_PACKAGE_udns-dnsget is not set
 # CONFIG_PACKAGE_udns-ex-rdns is not set
 # CONFIG_PACKAGE_udns-rblcheck is not set
