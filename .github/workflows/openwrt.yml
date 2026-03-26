@@ -11,7 +11,7 @@ on:
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt.git
-  REPO_BRANCH: v19.07.10
+  REPO_BRANCH: v25.12.2
   CONFIG_FILE: config
   UPLOAD_FIRMWARE: true
   TZ: Asia/Shanghai
