@@ -6,6 +6,15 @@ on:
     paths: [config]
   repository_dispatch:
   workflow_dispatch:
+    inputs:
+      clean_build:
+        description: 'Clean build (skip cache)'
+        type: boolean
+        default: false
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt.git
@@ -18,6 +27,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-24.04
+    timeout-minutes: 7200
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -35,16 +45,31 @@ jobs:
           sudo apt autoremove --purge -yqq
           sudo apt clean -qq
           sudo timedatectl set-timezone "$TZ"
-          # 创建工作目录
-          sudo mkdir -p /workdir
-          sudo chown $USER:$GROUPS /workdir
+
+      # ── 缓存加速：dl/ 下载目录 ──
+      - name: Cache download directory
+        uses: actions/cache@v4
+        with:
+          path: openwrt/dl
+          key: ${{ runner.os }}-dl-${{ hashFiles('config/**') }}
+          restore-keys: |
+            ${{ runner.os }}-dl-
+
+      # ── 缓存加速：staging_dir + build_dir ──
+      - name: Cache build directories
+        uses: actions/cache@v4
+        with:
+          path: |
+            openwrt/staging_dir
+            openwrt/build_dir
+          key: ${{ runner.os }}-build-${{ hashFiles('config/**') }}
+          restore-keys: |
+            ${{ runner.os }}-build-
 
       - name: Clone OpenWrt source
-        working-directory: /workdir
         run: |
           df -hT
           git clone $REPO_URL -b $REPO_BRANCH openwrt
-          ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
           # 更新软件源
           cd openwrt
           ./scripts/feeds update -a
@@ -52,15 +77,15 @@ jobs:
 
       - name: Load custom config
         run: |
-          [ -e files ] && mv files openwrt/files
-          [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+          [ -e files ] && mv files openwrt/files || true
+          [ -e $CONFIG_FILE ] && cp $CONFIG_FILE openwrt/.config || true
 
       - name: Download dependencies
         id: package
         run: |
           cd openwrt
           make defconfig
-          make download -j1
+          make download -j$(nproc) 2>/dev/null || true
           # 清理损坏的安装包
           find dl -size -1024c -delete
 
@@ -68,12 +93,12 @@ jobs:
         id: compile
         run: |
           cd openwrt
-          make -j1 V=s
-          # 修复：替换废弃的 set-output 语法
-          echo "status=success" >> $GITHUB_OUTPUT
+          make -j$(nproc) V=s 2>&1 | tee build.log || true
           # 生成设备名称和时间戳
-          echo "DEVICE_NAME=_$(grep -oP 'CONFIG_TARGET.*DEVICE_\K.*(?=y)' .config | head -1)" >> $GITHUB_ENV
-          echo "FILE_DATE=_$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
+          DEVICE_NAME=$(grep -oP 'CONFIG_TARGET.*DEVICE_\K.*(?=y)' .config 2>/dev/null | head -1 || echo "unknown")
+          FILE_DATE=$(date +"%Y%m%d%H%M")
+          echo "DEVICE_NAME=_${DEVICE_NAME}" >> $GITHUB_ENV
+          echo "FILE_DATE=_${FILE_DATE}" >> $GITHUB_ENV
 
       - name: Check disk space
         if: ${{ !cancelled() }}
@@ -81,7 +106,19 @@ jobs:
 
       - name: Upload full bin directory
         uses: actions/upload-artifact@v4
-        if: ${{ steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true' }}
+        if: ${{ steps.compile.outcome == 'success' && env.UPLOAD_BIN_DIR == 'true' }}
         with:
           name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
           path: openwrt/bin
+          retention-days: 14
+
+      - name: Cleanup build artifacts
+        if: ${{ always() }}
+        run: |
+          cd openwrt
+          # 保留 .config 和 feeds，删除编译产物释放空间
+          rm -rf build_dir target bin staging_dir packages
+          # 保留 dl/（已被缓存，但清理可释放空间）
+          rm -rf dl/*
+          cd ..
+          rm -rf openwrt
