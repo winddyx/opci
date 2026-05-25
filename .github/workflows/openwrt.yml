@@ -60,7 +60,7 @@ jobs:
         run: |
           cd openwrt
           make defconfig
-          make download -j1
+          make download -j$(nproc)
           # 清理损坏的安装包
           find dl -size -1024c -delete
 
@@ -68,7 +68,7 @@ jobs:
         id: compile
         run: |
           cd openwrt
-          make -j1 V=c
+          make -j$(nproc) V=c
           # 修复：替换废弃的 set-output 语法
           echo "status=success" >> $GITHUB_OUTPUT
           # 生成设备名称和时间戳
