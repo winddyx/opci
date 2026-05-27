@@ -3607,7 +3607,7 @@ CONFIG_ZSTD_OPTIMIZE_O3=y
 # CONFIG_PACKAGE_libacl is not set
 CONFIG_PACKAGE_libattr=y
 # CONFIG_PACKAGE_libfuse is not set
-# CONFIG_PACKAGE_libfuse3 is not set
+CONFIG_PACKAGE_libfuse3=y
 # CONFIG_PACKAGE_libow is not set
 # CONFIG_PACKAGE_libow-capi is not set
 # CONFIG_PACKAGE_libsysfs is not set
@@ -4293,7 +4293,7 @@ CONFIG_MESA_USE_LLVM=y
 # CONFIG_PACKAGE_ethtool-lua is not set
 # CONFIG_PACKAGE_getdns is not set
 # CONFIG_PACKAGE_giflib is not set
-# CONFIG_PACKAGE_glib2 is not set
+CONFIG_PACKAGE_glib2=y
 # CONFIG_PACKAGE_glslang is not set
 # CONFIG_PACKAGE_gnulib-l10n is not set
 # CONFIG_PACKAGE_google-authenticator-libpam is not set
@@ -4431,7 +4431,7 @@ CONFIG_PACKAGE_libf2fs=y
 # CONFIG_PACKAGE_libfastjson is not set
 CONFIG_PACKAGE_libfdisk=y
 # CONFIG_PACKAGE_libfdt is not set
-# CONFIG_PACKAGE_libffi is not set
+CONFIG_PACKAGE_libffi=y
 # CONFIG_PACKAGE_libffmpeg-audio-dec is not set
 # CONFIG_PACKAGE_libffmpeg-custom is not set
 # CONFIG_PACKAGE_libffmpeg-full is not set
@@ -4468,7 +4468,7 @@ CONFIG_PACKAGE_libfdisk=y
 # CONFIG_PACKAGE_libhwloc is not set
 # CONFIG_PACKAGE_libi2c is not set
 # CONFIG_PACKAGE_libical is not set
-# CONFIG_PACKAGE_libiconv-full is not set
+CONFIG_PACKAGE_libiconv-full=y
 # CONFIG_PACKAGE_libid3tag is not set
 # CONFIG_PACKAGE_libidn is not set
 # CONFIG_PACKAGE_libidn2 is not set
@@ -4580,7 +4580,8 @@ CONFIG_PACKAGE_libnl-tiny=y
 # CONFIG_PACKAGE_libpcap is not set
 # CONFIG_PACKAGE_libpci is not set
 # CONFIG_PACKAGE_libpciaccess is not set
-# CONFIG_PACKAGE_libpcre2 is not set
+CONFIG_PACKAGE_libpcre2=y
+CONFIG_PCRE2_JIT_ENABLED=y
 # CONFIG_PACKAGE_libpcre2-16 is not set
 # CONFIG_PACKAGE_libpcre2-32 is not set
 # CONFIG_PACKAGE_libpcsclite is not set
@@ -5292,7 +5293,7 @@ CONFIG_PACKAGE_cifsmount=y
 # CONFIG_PACKAGE_owftpd is not set
 # CONFIG_PACKAGE_owhttpd is not set
 # CONFIG_PACKAGE_owserver is not set
-# CONFIG_PACKAGE_sshfs is not set
+CONFIG_PACKAGE_sshfs=y
 # end of Filesystem
 
 #
@@ -6487,7 +6488,7 @@ CONFIG_PACKAGE_exfat-mkfs=y
 # CONFIG_PACKAGE_filefrag is not set
 # CONFIG_PACKAGE_fstrim is not set
 # CONFIG_PACKAGE_fuse-utils is not set
-# CONFIG_PACKAGE_fuse3-utils is not set
+CONFIG_PACKAGE_fuse3-utils=y
 # CONFIG_PACKAGE_hfsfsck is not set
 # CONFIG_PACKAGE_lf is not set
 # CONFIG_PACKAGE_lsattr is not set
