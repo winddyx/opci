@@ -3569,9 +3569,9 @@ CONFIG_PACKAGE_ucode-mod-uloop=y
 #
 # Compression
 #
-# CONFIG_PACKAGE_libbz2 is not set
+CONFIG_PACKAGE_libbz2=y
 # CONFIG_PACKAGE_liblz4 is not set
-# CONFIG_PACKAGE_liblzma is not set
+CONFIG_PACKAGE_liblzma=y
 # CONFIG_PACKAGE_libunrar is not set
 # CONFIG_PACKAGE_libzip-gnutls is not set
 # CONFIG_PACKAGE_libzip-mbedtls is not set
@@ -4510,7 +4510,7 @@ CONFIG_PACKAGE_liblucihttp=y
 CONFIG_PACKAGE_liblucihttp-ucode=y
 CONFIG_PACKAGE_liblzo=y
 # CONFIG_PACKAGE_libmad is not set
-# CONFIG_PACKAGE_libmagic is not set
+CONFIG_PACKAGE_libmagic=y
 # CONFIG_PACKAGE_libmanette is not set
 # CONFIG_PACKAGE_libmaxminddb is not set
 # CONFIG_PACKAGE_libmbim is not set
@@ -6883,7 +6883,7 @@ CONFIG_PACKAGE_tmux=y
 # CONFIG_PACKAGE_dfu-util is not set
 # CONFIG_PACKAGE_digitemp is not set
 # CONFIG_PACKAGE_digitemp-usb is not set
-# CONFIG_PACKAGE_dmesg is not set
+CONFIG_PACKAGE_dmesg=y
 # CONFIG_PACKAGE_docker is not set
 # CONFIG_PACKAGE_docker-compose is not set
 # CONFIG_PACKAGE_dockerd is not set
@@ -6901,7 +6901,7 @@ CONFIG_PACKAGE_tmux=y
 # CONFIG_PACKAGE_eza is not set
 # CONFIG_PACKAGE_fbtest is not set
 # CONFIG_PACKAGE_fdt-utils is not set
-# CONFIG_PACKAGE_file is not set
+CONFIG_PACKAGE_file=y
 # CONFIG_PACKAGE_findutils is not set
 # CONFIG_PACKAGE_findutils-find is not set
 # CONFIG_PACKAGE_findutils-locate is not set
