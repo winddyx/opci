@@ -70,7 +70,7 @@ jobs:
         id: compile
         run: |
           cd openwrt
-          make -j1 V=c
+          make -j1 V=Sc
           echo "status=success" >> $GITHUB_OUTPUT
           grep -oP 'CONFIG_TARGET.*DEVICE_\K.*(?=y)' .config | head -1
           echo "DEVICE_NAME=_$(grep -oP 'CONFIG_TARGET.*DEVICE_\K.*(?=y)' .config | head -1)" >> $GITHUB_ENV
