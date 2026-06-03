@@ -1,6 +1,6 @@
 --- a/arch/arm/boot/dts/allwinner/sun8i-h3-nanopi-neo.dts
 +++ b/arch/arm/boot/dts/allwinner/sun8i-h3-nanopi-neo.dts
-@@ -65,10 +65,25 @@
+@@ -65,12 +65,32 @@
  &ohci0 {
  	status = "okay";
  };
@@ -11,14 +11,6 @@
 +&ohci1 {
 +	status = "okay";
 +};
-+
-+&reg_usb0_vbus {
-+	status = "okay";
-+};
-+
-+&reg_usb1_vbus {
-+	status = "okay";
-+};
  
  &usb_otg {
  	status = "okay";
@@ -27,3 +19,18 @@
  };
  
  &usbphy {
+ 	usb0_id_det-gpios = <&pio 6 12 GPIO_ACTIVE_HIGH>; /* PG12 */
+ };
++
++&reg_usb0_vbus {
++	status = "okay";
++	/delete-property/ gpio;
++	regulator-always-on;
++};
++
++&reg_usb1_vbus {
++	status = "okay";
++	/delete-property/ gpio;
++	regulator-always-on;
++};
++
