@@ -6226,7 +6226,7 @@ CONFIG_WPA_MBO_SUPPORT=y
 # CONFIG_PACKAGE_wpa-supplicant-mini is not set
 # CONFIG_PACKAGE_wpa-supplicant-openssl is not set
 # CONFIG_PACKAGE_wpa-supplicant-p2p is not set
-# CONFIG_PACKAGE_wpa-supplicant-wolfssl is not set
+CONFIG_PACKAGE_wpa-supplicant-wolfssl=y
 # CONFIG_PACKAGE_wpad is not set
 # CONFIG_PACKAGE_wpad-basic is not set
 # CONFIG_PACKAGE_wpad-basic-mbedtls is not set
@@ -6235,7 +6235,7 @@ CONFIG_WPA_MBO_SUPPORT=y
 # CONFIG_PACKAGE_wpad-mbedtls is not set
 # CONFIG_PACKAGE_wpad-mesh-mbedtls is not set
 # CONFIG_PACKAGE_wpad-mesh-openssl is not set
-# CONFIG_PACKAGE_wpad-mesh-wolfssl is not set
+CONFIG_PACKAGE_wpad-mesh-wolfssl=m
 # CONFIG_PACKAGE_wpad-mini is not set
 # CONFIG_PACKAGE_wpad-openssl is not set
 CONFIG_PACKAGE_wpad-wolfssl=m
